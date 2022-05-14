@@ -2,15 +2,39 @@ use clap:: {
     Parser
 };
 
-/// Simple program to greet a person
+/// Simple program to generate random passwords
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
 pub struct MyArgs {
-    /// Name of the person to greet
-    #[clap(short, long)]
-    pub name: String,
+    /// Password lenght
+    #[clap(short, long, default_value = "5")]
+    pub size: usize,
 
-    /// Number of times to greet
-    #[clap(short, long, default_value_t = 1)]
-    pub count: u8,
+    /// Numbers
+    #[clap(short, long, default_value = "true")]
+    pub n: String,
+
+    /// Lower case letters
+    #[clap(short, long, default_value = "true")]
+    pub lcl: String,
+
+    /// Upper case
+    #[clap(short, long, default_value = "true")]
+    pub ucl: String,
+
+    /// Symbols
+    #[clap(short, long, default_value = "false")]
+    pub y: String,
+
+    /// Spaces
+    #[clap(short, long, default_value = "false")]
+    pub k: String,
+
+    /// Exclude similar characters
+    #[clap(short, long, default_value = "true")]
+    pub c : String,
+
+    /// Strict
+    #[clap(short, long, default_value = "false")]
+    pub t : String,
 }
