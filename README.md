@@ -31,3 +31,8 @@ _Compile the executable using a library code inside than execute the file_
 ```bash
 rustc executable.rs --extern rary=library.rlib --edition=2018 && ./executable
 ```
+
+[reference](https://doc.rust-lang.org/rust-by-example/crates.html)
+
+## Future sections
+- The manifest Format
