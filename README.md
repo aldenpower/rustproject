@@ -34,5 +34,11 @@ rustc executable.rs --extern rary=library.rlib --edition=2018 && ./executable
 
 [reference](https://doc.rust-lang.org/rust-by-example/crates.html)
 
+## Some crate cool imports
+```rust
+use std::process::Command;
+use std::env::Args;
+use clap::{App, Arg};
+```
 ## Future sections
 - The manifest Format
