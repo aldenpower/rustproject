@@ -42,6 +42,7 @@ use clap::{App, Arg};
 ```
 ## Strings
 ```rust
+//create string
 fn main () {
     let s1: &str = "😁";
     let s2: String = String::from("doakoask");
@@ -53,6 +54,85 @@ fn main () {
     println!("{}", s5)
 }
 ```
+```rust
+fn main () {
+    let mut s: String = String::from("foo");
+    s.push_str("bar");
+    println!("{}", s);
+    s.replace_range(.., "baz");
+    println!("{}", s);
+}
+```
+```rust
+fn main () {
+    let s1: String = String::from("Hello, ");
+    let s2: String = String::from("world!");
+    let s3 = s1 + &s2;
+    println!("{}", s3);
+}
+```
+```rust
+fn main () {
+    let s1: String = String::from("Hello, ");
+    let s2: String = String::from("aaa, ");
+    let s4: String = String::from("bafd, ");
+    
+    let s: String = format!("{}{}{}", s1, s2, s4);
+    //let s: String = format!("{}{}{}", s1, s2, "toe");
+    println!("{}", s)
+}
+```
+```rust
+fn main () {
+    let s1: String = ["first", "second"].concat();
+    let s2: String = format!("{}{}", "first", "second");
+    let s3: &str = concat!("first", "second");
+    
+    let s4: String = String::from("test");
+    let s5: String = s4 + "okok";
+}
+```
+```rust
+fn main () {
+    // slicing string
+    let s1: &str = "akoskd";
+    let s2: &str = &s1[1..2];
+    println!("{}", s2);
+}
+```
+```rust
+// Iterate string
+fn main () {
+    for b in "dasd".bytes() {
+        println!("{}", b);
+    }
+    
+    for b in "dasd".bytes() {
+        println!("{}", b);
+    }
+    
+    fn main () {
+    for b in "dasd".graphemes(true) {
+        println!("{}", b);
+    }
+}
+}
+
+```rust
+fn main () {
+    let s1: &str = "Hello world!";
+    let s2: String = String::from("Hello world!");
+    my_function(s1);
+    // pass reference string will automatically use string slice
+    my_function(&s2);
+}
+
+// -> String takes ownership of the string
+fn my_function (a: &str) -> String {
+    return format!("{}", a);
+}
+```
+
 
 ## Future sections
 - The manifest Format
