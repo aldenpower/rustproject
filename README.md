@@ -40,5 +40,19 @@ use std::process::Command;
 use std::env::Args;
 use clap::{App, Arg};
 ```
+## Strings
+```rust
+fn main () {
+    let s1: &str = "😁";
+    let s2: String = String::from("doakoask");
+    let s3: String = "dkaos".to_string();
+    let s4: String = "dkaos".to_owned();
+    let s5: &str = &s4[0..2];
+    let s6: &str = &s4[..];
+    
+    println!("{}", s5)
+}
+```
+
 ## Future sections
 - The manifest Format
