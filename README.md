@@ -39,6 +39,10 @@ rustc executable.rs --extern rary=library.rlib --edition=2018 && ./executable
 use std::process::Command;
 use std::env::Args;
 use clap::{App, Arg};
+use std::env;
+use std::io::{self, Write};
+use std::path::Path;
+use std::fs;
 ```
 ## Strings
 ```rust
