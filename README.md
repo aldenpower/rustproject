@@ -33,6 +33,7 @@ rustc executable.rs --extern rary=library.rlib --edition=2018 && ./executable
 ```
 
 [reference](https://doc.rust-lang.org/rust-by-example/crates.html)
+[reference](https://riptutorial.com/rust/example/26619/basic-error-reporting-and-handling)
 
 ## Some crate cool imports
 ```rust
