@@ -137,7 +137,25 @@ fn my_function (a: &str) -> String {
     return format!("{}", a);
 }
 ```
+## I/O
+``` rust
+let mut input = String::new();
+io::stdin().read_line(&mut input).unwrap();
+let weight: f32 = input.trim().parse().unwrap();
+```
 
+## Comments
+> All variables in Rust are immutable by default
+
+> References can be mutable or immutable
+
+> We can have multiple and immutable references at the same time
+
+> Each value in Rust is owned by a variable.
+
+> When the owner goes out of scope, the value will be deallocated
+
+> There can only be ONE owner at a time
 
 ## Future sections
 - The manifest Format
