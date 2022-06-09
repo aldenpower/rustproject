@@ -1,16 +1,11 @@
 fn main() {
-    let string = String::from("127.0.0.1:8080");
-    let string_slice = &string[10..];
-    let string_borrow: &str = &string;
-    let string_literal = "1234";
+    let get: Method = Method::GET("abcd".to_string());
+    let delete: Method = Method::DELETE(100);
+    let post: Method = Method::POST;
+    let put: Method = Method::PUT;
 
-    dbg!(&string);
-    dbg!(string_slice);
-    dbg!(string_borrow);
-    dbg!(string_literal);
-
-    // let server = Server::new(string);
-    // server.run();
+    let server = Server::new("127.0.0.1:8080".to_string());
+    server.run();
 }
 
 
@@ -54,6 +49,25 @@ impl Server {
     run method willg get a mutable reference
     */
     fn run (&self) {
-
+        println!("Listening on {}", self.addr);
     }
+}
+
+struct Request {
+    path: String,
+    query_string: String,
+    method: Method,
+}
+
+enum Method {
+    GET(String),
+    DELETE(u64),
+    POST,
+    //POST = 5
+    PUT,
+    HEAD,
+    CONNECT,
+    OPTIONS,
+    TRACE,
+    PATCH,
 }
