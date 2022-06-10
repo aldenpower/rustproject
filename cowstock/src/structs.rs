@@ -1,16 +1,18 @@
 #[derive(Debug)]
 pub struct Cow {
-    pub name: String,
-    pub valor_compra : f32,
-    pub valor_venda : f32,
-    pub capacity : u8,
-    pub milk : Vec<Milk>
+    pub n: String,
+    pub vc : f32,
+    pub vv : f32,
+    pub cp : u8,
+    pub m : Vec<Milk>
 }
 
 impl Cow {
-    pub fn spread (&self) -> f32 {
-        self.valor_compra - self.valor_venda
+    pub fn new (n: String, vc: f32, vv: f32, cp: u8, m: Vec<Milk>) -> Self {
+        Self { n, vc, vv, cp, m}
     }
+
+    pub fn spread (&self) -> f32 {self.vc - self.vv}
 }
 
 #[derive(Debug)]
