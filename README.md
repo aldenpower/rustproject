@@ -144,6 +144,10 @@ io::stdin().read_line(&mut input).unwrap();
 let weight: f32 = input.trim().parse().unwrap();
 ```
 
+## .unwrap()
+If the **result** is **ok** it will return the ok value,
+if not ok terminate the program and the error is returned to the screen
+
 ## Comments
 > All variables in Rust are immutable by default
 
